@@ -690,10 +690,12 @@ public class DesingProjectTestcases {
      
      
      @Then("Clicking on Assign button to assing the role for the desire number of users")
-     public void Clicking_on_Assign_button_to_assing_the_role_for_the_desire_number_of_users() {
+     public void Clicking_on_Assign_button_to_assing_the_role_for_the_desire_number_of_users()  throws Exception  {
     	 try {
  			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+ 			Thread.sleep(4000);
  			AR.ClickOnAssignButton();
+ 			Thread.sleep(3000);
      	} catch (Exception e) {
  			ExceptionHandler exceptionHandler = new ExceptionHandler(driver, ExtentCucumberAdapter.getCurrentStep());
  		   exceptionHandler.handleException(e, "Role Assigning Page");
@@ -705,9 +707,15 @@ public class DesingProjectTestcases {
      //Assign Role For Group
      
      @Then("Clicking on Assign Role for Group tab")
-     public void clicking_on_assign_role_for_group_tab() {
+     public void clicking_on_assign_role_for_group_tab() throws Exception {
     	 try {
   			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
+  			driver.navigate().refresh();
+  			Thread.sleep(4000);
+  			AR.ClickOnSetting();
+  			Thread.sleep(4000);
+  			AR.ClickOnAssignRole();
+  			Thread.sleep(4000);
   			AR.ClickOnAssignRoleForGroupTab();
       	} catch (Exception e) {
   			ExceptionHandler exceptionHandler = new ExceptionHandler(driver, ExtentCucumberAdapter.getCurrentStep());
@@ -1801,6 +1809,7 @@ public void entering_valid_actual_cost_in_the_field_in_add_issue_using_sheetname
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(65));
 		Thread.sleep(2000);
 		RVW.ClickOnCreateButton();
+		Thread.sleep(3000);
 //		if (D.isElementVisible(D.Error)) {
 //            System.out.println("RFA Not Created due to Error Message");
 //            Assert.assertEquals(D.isElementVisible(D.Error), "Error");
@@ -2901,10 +2910,12 @@ public void entering_valid_actual_cost_in_the_field_in_add_issue_using_sheetname
 
      
      @Then("Click on Create Button to create checklist")
-     public void Click_on_Create_Button_to_create_checklist() {
+     public void Click_on_Create_Button_to_create_checklist() throws Exception {
     	 try {
   			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(13));
+  			Thread.sleep(2000);
   			R.ClickOnCreateButton();
+  			Thread.sleep(3000);
 //  			if (D.isElementVisible(D.Error)) {
 //                System.out.println("CheckList Not Created due to Error Message");
 //                Assert.assertEquals(D.isElementVisible(D.Error), "Error");

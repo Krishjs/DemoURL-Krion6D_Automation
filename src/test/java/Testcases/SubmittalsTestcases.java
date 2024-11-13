@@ -351,9 +351,11 @@ public class SubmittalsTestcases {
 	}
 
 	@Given("Click create button in the screen")
-	public void click_create_button_in_the_screen() {
+	public void click_create_button_in_the_screen() throws InterruptedException {
 		RFI.scrolling(200);
+		Thread.sleep(2000);
 		S.createclick();
+		Thread.sleep(3000);
 	}
 
 	@Then("Submittals should be created")
