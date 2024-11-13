@@ -56,22 +56,22 @@ Scenario: User Login for Design Projects
       Scenario: Verify by Entering the project Start Date
   		Then Entering Start Date of the project using sheetname "Add Project" and rownumber 0
   		
-  		 @Run   
+  		@Run    
   		Scenario: Verify by Enter and select the project Design type from drop-down
   		Then Enter and select the project design type from drop-down using sheetname "Add Project" and rownumber 0
   		
   		  @Run 
   	   Scenario: Verify by Enter and select the project category type from drop-down
   		 Then Enter and select the project category type from drop-down using sheetname "Add Project" and rownumber 0	
-  		 @Run  
+  		  @Run 
   		 Scenario: Verify by Enter and select the project owner type from drop-down
   		 Then Enter and select the project owner type from drop-down using sheetname "Add Project" and rownumber 0	
-  		  @Run 
+  		 @Run  
   		 Scenario: Verify by Enter and select the project status type from drop-down
   		 Then Enter and select the project status type from drop-down using sheetname "Add Project" and rownumber 0		
   		
   		
-  		  @Run
+  		 @Run 
   		 Scenario: Verify by Entering address in address line one field
   		 Then Entering address in address line one field using sheetname "Add Project" and rownumber 0
   		 @Run
@@ -111,21 +111,21 @@ Scenario: User Login for Design Projects
   		#Scenario: verify by adding the assign role and assing role for group based on excel data#
   	#	Then Assign role or group based on the data in Excel using sheetname "Assign Role" and rownumber 0#
   		
-  				@Run  	 
+  			@Run	  	 
   		Scenario: Verify by clicking on Assign role sub-module under settings in newly Created Project under Design module
   		Then Clciking on Assign role sub-module under settings in newly Created Project under Design module
   		
-  			@Run	  	 	 
+  		@Run	 	  	 	 
   		Scenario: Verify by clicking on Assign Role button to assigning the role to the user
   		Then Clicking on Assign Role button to assigning the role to the user
   		
-  		@Run 		 	
+  		@Run  		 	
   		Scenario: Veriffy by Clicking on Select role drop-down to select the required role from the list
   		Then Clicking on Select role drop-down to select the required role from the list using sheetname "Assign Role" and rownumber 0
-  		@Run 					 	 
+  		 @Run 					 	 
   		Scenario: Veriffy by Clicking on Add user drop-down to select the required number of users from the list
   		Then Clicking on Add user drop-down to select the required number of users from the list sheetname "Assign Role" and rownumber 0
-  		@Run			 	 
+  		@Run 			 	 
   		Scenario: Veirfy by clicking on Assign button to assign the role for the desire number of users
   		Then Clicking on Assign button to assing the role for the desire number of users
   		
@@ -135,16 +135,16 @@ Scenario: User Login for Design Projects
   			@Run			  
   		Scenario: verify by clicking on Assign Role for Group tab
   		Then Clicking on Assign Role for Group tab
-  			@Run		  
+  		@Run			  
   		Scenario: Verify by clicking on Assign Role Group button to create a group
   		Then Clickingon Assign Role Group button to create a group
-  			@Run	  
+  		@Run		  
   		Scenario: Veriffy by Clicking on Select role drop-down to select the required role from the list for Group
   		Then Clicking on Select role drop-down to select the required role from the list for Group using sheetname "Assign Role" and rownumber 0
-  				@Run	  
+  		@Run			  
   		Scenario: Veriffy by Clicking on Add group drop-down to select the required number of users from the list
   		Then Clicking on Add group drop-down to select the required number of users from the list sheetname "Assign Role" and rownumber 0
-  				@Run	  
+  		@Run			  
   		Scenario: Veirfy by clicking on Assign button to assign the role for the desire number of users in group
   		Then Clicking on Assign button to assing the role for the desire number of users users in group
   		
@@ -152,7 +152,7 @@ Scenario: User Login for Design Projects
   		
   		
   		#WorkFlow Creation#
-  		 		@Run  	   
+  		@Run 		  	   
   		Scenario: Creating workflow based on the type selected in the select category of the project
  			Then Creating workflow based on the type selected in the select category of the project using sheetname "Workflow" and rownumber 0
   		
@@ -160,7 +160,7 @@ Scenario: User Login for Design Projects
   		
   	 #Documents ----> Document Module ----> Kamal
 			 
-			 @Run
+			@Run 
 			Scenario: Verify the uploading documents in document module
 			Then Click on File upload button in document module
 			Then upload the document using sheetname "Document"
@@ -171,7 +171,7 @@ Scenario: User Login for Design Projects
   		
   		
   		#Actions -> Review Page Creation
-  			 @Run 	
+  		@Run	  	
   		Scenario: Verify by clicking on Action module from sidebar
   		Then Clicking on Action module from sidebar
   			 
@@ -186,7 +186,7 @@ Scenario: User Login for Design Projects
   		@Run	    	
   		Scenario: Verify by Entering valid code on Review Code field
   		Then Entering  valid code on Review Code field using sheetname "Add Review" and rownumber 0
-  		 @Run	   
+  		@Run 	   
   		Scenario: Verify by Entering valid name on Review Name field
   		Then Entering valid name on Review Name field using sheetname "Add Review" and rownumber 0
   	  @Run	   
@@ -195,22 +195,22 @@ Scenario: User Login for Design Projects
   		  @Run	  
   		Scenario: Verify by Entering valid start date on the field
   		Then Entering valid start date on the field using sheetname "Add Review" and rownumber 0
-  			@Run    
+  		@Run	    
   		Scenario: Verify by Entering valid End date on the field
   		Then Entering valid End date on the field using sheetname "Add Review" and rownumber 0
-  		  @Run  
+  		 @Run   
   		Scenario: Verify by Selecting workflow on the field
   		Then Selecting workflow on the field using sheetname "Add Review" and rownumber 0
-  		 	@Run   
+  		@Run 	   
   		Scenario: Verify by Selecting priority from the drop-down
   		Then Selecting priority from the drop-down using sheetname "Add Review" and rownumber 0
-  		  @Run  
+  		 @Run   
   		Scenario: Verify by Entering valid Estimate cost in the field
   		Then Entering valid Estimate cost in the field using sheetname "Add Review" and rownumber 0
-  		@Run  
+  		 @Run 
   		Scenario: Verify by Entering valid Actual cost in the field
   		Then Entering valid Actual cost in the field using sheetname "Add Review" and rownumber 0
-  		@Run  
+  		 @Run 
   		Scenario: Verify by Selecting checklist from the drop-down
   		Then Selecting checklist from the drop-down using sheetname "Add Review" and rownumber 0
   		Then Clicking on Create button to create a Review for the project
@@ -218,26 +218,26 @@ Scenario: User Login for Design Projects
   		
   			#Actions -> Issue Page Creation
   			
-  		@Run 
+  		 @Run
   		Scenario: Verify by clicking on Issues sub-module from sidebar
   		Then Clicking on Issues sub-module from sidebar
   		Then Clicking on ADD button to create Add Issues
   		@Run 
   		Scenario: Verify by Entering valid code on Issue Code field
   		Then Entering valid code on Issue Code field using sheetname "Add Issue" and rownumber 0
-  		 @Run
+  		@Run 
  			Scenario: Verify by Entering valid name on Name field
   		Then Entering valid name on Name field using sheetname "Add Issue" and rownumber 0
       @Run
 		 	Scenario: Verify by Entering Description on the field Add Issue
   		Then Entering Description on the field in add issue using sheetname "Add Issue" and rownumber 0
- 			@Run 
+ 			 @Run
     	Scenario: Verify by Entering valid start date on the field Add Issue
   		Then Entering valid start date on the field in add issue using sheetname "Add Issue" and rownumber 0
 			@Run 
   		Scenario: Verify by Entering valid Due date on the field Add Issue
   		Then Entering valid Due date on the field in add issue using sheetname "Add Issue" and rownumber 0
- 			@Run 
+ 			 @Run
  			Scenario: Verify by Selecting Type from the drop-down Add Issue
   		Then Selecting Type from the drop-down using sheetname "Add Issue" and rownumber 0
  			@Run
@@ -255,7 +255,7 @@ Scenario: User Login for Design Projects
  			@Run
 			Scenario: Verify by Entering valid Estimate cost in the field Add Issue
   		Then Entering valid Estimate cost in the field in add issue using sheetname "Add Issue" and rownumber 0
-  		@Run  
+  		  @Run
   		Scenario: Verify by Entering valid Actual cost in the field Add Issue
   		Then Entering valid Actual cost in the field in add issue using sheetname "Add Issue" and rownumber 0
  			@Run
@@ -276,16 +276,16 @@ Scenario: User Login for Design Projects
   		 @Run
   		Scenario: Verify by Entering valid code on RFA Code field
   		Then Entering valid code on RFA Code field using sheetname "Add RFA" and rownumber 0
-  		 	@Run
+  		 @Run	
  			Scenario: Verify by Entering valid name on RFA Name field
   		Then Entering valid name on RFA Name field using sheetname "Add RFA" and rownumber 0
        @Run	
 		 	Scenario: Verify by Entering Description on the field Add RFA
   		Then Entering Description on the field in add RFA using sheetname "Add RFA" and rownumber 0
- 			 @Run		
+ 			@Run 		
     	Scenario: Verify by Entering valid start date on the field Add RFA
   		Then Entering valid start date on the field in add RFA using sheetname "Add RFA" and rownumber 0
-				@Run	
+			@Run		
   		Scenario: Verify by Entering valid End date on the field Add RFA
   		Then Entering valid End date on the field in add RFA using sheetname "Add RFA" and rownumber 0
 			@Run		
@@ -294,7 +294,7 @@ Scenario: User Login for Design Projects
 			@Run	
 			Scenario: Verify by Selecting priority from the drop-down Add RFA
   		Then Selecting priority from the drop-down in add RFA using sheetname "Add RFA" and rownumber 0
-				@Run	
+			@Run		
 			Scenario: Verify by Selecting Attach files from the drop-down under checklist and attaching the files 
   		Then Selecting Attach files from the drop-down and attaching the files using sheetname "Add RFA" and rownumber 0
  			Then Clicking on Create button to create a RFA for the project
@@ -378,7 +378,7 @@ Scenario: User Login for Design Projects
 			@Run
 			Scenario: Verify by Entering Meeting Time on date field in Add Meeting
 			Then Entering Meeting Time on date field in add Meeting using sheetname "Add Meeting" and rownumber 0
-				@Run
+			@Run	
 			Scenario: Verify by Entering Meeting Duration hours and minutes field in Add Meeting
 			Then Entering Meeting Duration hours and minutes field in add Meeting using sheetname "Add Meeting" and rownumber 0
 			@Run
@@ -402,7 +402,7 @@ Scenario: User Login for Design Projects
 						
 			# Share - > Submittals Module -----> Kamal
 			
-			@Run 
+		@Run	 
     Scenario: Verify the user is creating the Submittals
     And Navigate to Submittals in the Share Module
     Then Click Add button on the screen
@@ -465,13 +465,13 @@ Scenario: User Login for Design Projects
 			# Share - >  Transmittals Module -----> Kamal
 			
 			
-			@Run
+		@Run	
     Scenario: Verify the user is creating the Transmittals
     And Navigate to Transmittals in the Share Module
     Then Click Add button in the screen
     
     
-			@Run
+		@Run	
     Scenario: Verify entering valid Transmittals details
     And Enable or disable the toggle button using the sheetname "Transmittals" and rownumber 0
     @Run
@@ -481,7 +481,7 @@ Scenario: User Login for Design Projects
     @Run
     Scenario: Verify entering valid name
     And Enter the Transmittalname using the sheetname "Transmittals" and rownumber 0
-     @Run 
+    @Run  
     Scenario: Verify entering valid Description
     Then Enter the Descriptions of transmittal using the sheetname "Transmittals" and rownumber 0
     @Run
@@ -490,7 +490,7 @@ Scenario: User Login for Design Projects
     @Run
     Scenario: Verify Attaching files in the Attach files option
     Then Attach the file by the filename using the sheetname "Transmittals" and rownumber 0
-     @Run 
+    @Run  
     Scenario: Verify click the create button
     Given Click the create button in the screen
     Then Transmittals should be created
@@ -509,22 +509,22 @@ Scenario: User Login for Design Projects
 			@Run
 			Scenario: Verify by Selecting Parent BOM/BOQ name from the drop-down in BOM/BOQ
   		Then Selecting Parent BOM/BOQ name from the drop-down in BOM/BOQ using sheetname "Add BOMBOQ" and rownumber 0
-  		  @Run 
+  		@Run   
   		Scenario: Verify by Entering valid code on BOM/BOQ Code field in BOM/BOQ
   		Then Entering valid code on BOM/BOQ Code field using sheetname "Add BOMBOQ" and rownumber 0
-  			@Run   
+  		@Run	   
   		Scenario: Verify by Entering valid name on Name field in BOM/BOQ
   		Then Entering valid name on Name field in BOM/BOQ using sheetname "Add BOMBOQ" and rownumber 0
-  		  @Run 
+  		@Run   
   		Scenario: Verify by Selecting workflow on the field in BOM/BOQ
   		Then Selecting workflow on the field in BOM/BOQ using sheetname "Add BOMBOQ" and rownumber 0
-  			@Run   
+  		@Run	   
   		Scenario: Verify by Selecting priority from the drop-down in BOM/BOQ
   		Then Selecting priority from the drop-down in BOM/BOQ using sheetname "Add BOMBOQ" and rownumber 0
   		@Run   
   		Scenario: Verify by Entering valid unit field from the drop-down in BOM/BOQ
   		Then Entering valid unit field from the drop-down in BOM/BOQ using sheetname "Add BOMBOQ" and rownumber 0
-  		 @Run  
+  		@Run
   		Scenario: Verify by Entering valid Estimated Quantity in the field in BOM/BOQ
   		Then Entering valid Estimated Quantity in the field in BOM/BOQ using sheetname "Add BOMBOQ" and rownumber 0
 			@Run
@@ -536,7 +536,7 @@ Scenario: User Login for Design Projects
 		  @Run
 			Scenario: Verify by Entering valid Ordered Quantity in the field in BOM/BOQ
   		Then Entering valid Ordered Quantity in the field in BOM/BOQ using sheetname "Add BOMBOQ" and rownumber 0	
-				@Run
+			@Run	
 			Scenario: Verify by Entering valid Quoted Price per unit in the field in BOM/BOQ
   		Then Entering valid Quoted Price per unit in the field in BOM/BOQ using sheetname "Add BOMBOQ" and rownumber 0
 			@Run	
