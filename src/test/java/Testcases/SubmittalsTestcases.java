@@ -355,7 +355,7 @@ public class SubmittalsTestcases {
 		RFI.scrolling(200);
 		Thread.sleep(2000);
 		S.createclick();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 
 	@Then("Submittals should be created")

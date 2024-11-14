@@ -36,7 +36,7 @@ Scenario: User Login for Design Projects
  				Scenario: Verify by Choosing whether to create ISO project or Non-ISO project
  				Then Choosing whether to create ISO project or Non-ISO project using sheetname "Add Project" and rownumber 0
  
- 		@Run 
+ 		 @Run
     Scenario: Verify by selecting the project template
     Then Clicking on Project template field and selecting the template using sheetname "Add Project" and rownumber 0
  
@@ -44,7 +44,7 @@ Scenario: User Login for Design Projects
     Scenario: Verify by Entering the valid project code
     Then Entering valid project code using sheetname "Add Project" and rownumber 0
   
-    @Run 
+     @Run 
      Scenario: Verify by Entering the valid project name
      Then Entering valid project name using sheetname "Add Project" and rownumber 0
   
@@ -66,7 +66,7 @@ Scenario: User Login for Design Projects
   		 @Run  
   		 Scenario: Verify by Enter and select the project owner type from drop-down
   		 Then Enter and select the project owner type from drop-down using sheetname "Add Project" and rownumber 0	
-  		  @Run 
+  		 @Run  
   		 Scenario: Verify by Enter and select the project status type from drop-down
   		 Then Enter and select the project status type from drop-down using sheetname "Add Project" and rownumber 0		
   		
@@ -80,13 +80,13 @@ Scenario: User Login for Design Projects
   		 @Run
   		 Scenario: Verify by Entering City name in the field
   		 Then Entering City name in the field using sheetname "Add Project" and rownumber 0
-  		@Run  
+  		 @Run 
   		Scenario: Verify by Entering State name in the field
   		Then Entering State name in the field using sheetname "Add Project" and rownumber 0
-  		@Run 
+  		 @Run
   		Scenario: Verify by Entering valid Pincode in the field
   		Then Entering valid Pincode in the field using sheetname "Add Project" and rownumber 0
-  		@Run  
+  		 @Run 
   		Scenario: Verify by Entering Country name in the field
   		Then Entering Country name in the field using sheetname "Add Project" and rownumber 0
   		 @Run 
@@ -160,7 +160,7 @@ Scenario: User Login for Design Projects
   		
   	 #Documents ----> Document Module ----> Kamal
 			 
-			 @Run
+			@Run 
 			Scenario: Verify the uploading documents in document module
 			Then Click on File upload button in document module
 			Then upload the document using sheetname "Document"
@@ -180,7 +180,7 @@ Scenario: User Login for Design Projects
   		Scenario: Verify by clicking on Review sub-module from sidebar
   		Then Clicking on Review sub-module from sidebar
   		Then Clicking on ADD button to create Add review 
-  		 @Run  	 		
+  		@Run   	 		
   		Scenario: Verify by Selecting Parent Review name from the drop-down
   		Then Selecting Parent Review name from the drop-down using sheetname "Add Review" and rownumber 0
   		@Run	    	
@@ -192,25 +192,25 @@ Scenario: User Login for Design Projects
   	  @Run	   
   		Scenario: Verify by Entering Description on the field
   		Then Entering Description on the field using sheetname "Add Review" and rownumber 0
-  		  @Run	  
+  		@Run  	  
   		Scenario: Verify by Entering valid start date on the field
   		Then Entering valid start date on the field using sheetname "Add Review" and rownumber 0
   		@Run	    
   		Scenario: Verify by Entering valid End date on the field
   		Then Entering valid End date on the field using sheetname "Add Review" and rownumber 0
-  		 @Run   
+  		@Run    
   		Scenario: Verify by Selecting workflow on the field
   		Then Selecting workflow on the field using sheetname "Add Review" and rownumber 0
   		@Run 	   
   		Scenario: Verify by Selecting priority from the drop-down
   		Then Selecting priority from the drop-down using sheetname "Add Review" and rownumber 0
-  		 @Run   
+  		@Run    
   		Scenario: Verify by Entering valid Estimate cost in the field
   		Then Entering valid Estimate cost in the field using sheetname "Add Review" and rownumber 0
   		 @Run 
   		Scenario: Verify by Entering valid Actual cost in the field
   		Then Entering valid Actual cost in the field using sheetname "Add Review" and rownumber 0
-  		 @Run 
+  		@Run  
   		Scenario: Verify by Selecting checklist from the drop-down
   		Then Selecting checklist from the drop-down using sheetname "Add Review" and rownumber 0
   		Then Clicking on Create button to create a Review for the project
@@ -218,7 +218,7 @@ Scenario: User Login for Design Projects
   		
   			#Actions -> Issue Page Creation
   			
-  		 @Run
+  		@Run 
   		Scenario: Verify by clicking on Issues sub-module from sidebar
   		Then Clicking on Issues sub-module from sidebar
   		Then Clicking on ADD button to create Add Issues
@@ -231,10 +231,10 @@ Scenario: User Login for Design Projects
       @Run
 		 	Scenario: Verify by Entering Description on the field Add Issue
   		Then Entering Description on the field in add issue using sheetname "Add Issue" and rownumber 0
- 			 @Run
+ 			@Run 
     	Scenario: Verify by Entering valid start date on the field Add Issue
   		Then Entering valid start date on the field in add issue using sheetname "Add Issue" and rownumber 0
-			@Run 
+			 @Run
   		Scenario: Verify by Entering valid Due date on the field Add Issue
   		Then Entering valid Due date on the field in add issue using sheetname "Add Issue" and rownumber 0
  			 @Run
@@ -249,13 +249,13 @@ Scenario: User Login for Design Projects
  			@Run
  			Scenario: Verify by Selecting Workflow from the drop-down Add Issue
   		Then Selecting Workflow from the drop-down in add issue using sheetname "Add Issue" and rownumber 0
- 		  @Run
+ 		  @Run 
  			Scenario: Verify by Entering Location in the field Add Issue
   		Then Entering Location in the field in add issue using sheetname "Add Issue" and rownumber 0
  			@Run
 			Scenario: Verify by Entering valid Estimate cost in the field Add Issue
   		Then Entering valid Estimate cost in the field in add issue using sheetname "Add Issue" and rownumber 0
-  		  @Run
+  		 @Run 
   		Scenario: Verify by Entering valid Actual cost in the field Add Issue
   		Then Entering valid Actual cost in the field in add issue using sheetname "Add Issue" and rownumber 0
  			@Run
@@ -276,10 +276,10 @@ Scenario: User Login for Design Projects
   		 @Run
   		Scenario: Verify by Entering valid code on RFA Code field
   		Then Entering valid code on RFA Code field using sheetname "Add RFA" and rownumber 0
-  		 @Run	
+  		@Run 	
  			Scenario: Verify by Entering valid name on RFA Name field
   		Then Entering valid name on RFA Name field using sheetname "Add RFA" and rownumber 0
-       @Run	
+      @Run 	
 		 	Scenario: Verify by Entering Description on the field Add RFA
   		Then Entering Description on the field in add RFA using sheetname "Add RFA" and rownumber 0
  			@Run 		
@@ -288,7 +288,7 @@ Scenario: User Login for Design Projects
 			@Run		
   		Scenario: Verify by Entering valid End date on the field Add RFA
   		Then Entering valid End date on the field in add RFA using sheetname "Add RFA" and rownumber 0
-			@Run		
+				@Run	
 			Scenario: Verify by Selecting Workflow from the drop-down Add RFA
   		Then Selecting Workflow from the drop-down in add RFA using sheetname "Add RFA" and rownumber 0
 			@Run	
@@ -323,7 +323,7 @@ Scenario: User Login for Design Projects
      @Run
      Scenario: Verify entering valid RFI Question field
      And Enter the RFI Question using the sheetname "RFI" and rownumber 0
-     @Run
+     @Run 
      Scenario: Verify entering valid Suggested answer field
      And Enter the Answer using the sheetname "RFI" and rownumber 0
      @Run
@@ -350,7 +350,7 @@ Scenario: User Login for Design Projects
      @Run
      Scenario: Verify Uploading image in the Upload photos/images field
      Then Upload image from the image path using the sheetname "RFI" and rownumber 0
-     @Run
+     @Run 
      Scenario: Verify Attaching files in the Attach files
      Then Attach the file name using the sheetname "RFI" and rownumber 0
      @Run
