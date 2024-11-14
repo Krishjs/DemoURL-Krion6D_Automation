@@ -693,7 +693,7 @@ public class DesingProjectTestcases {
      public void Clicking_on_Assign_button_to_assing_the_role_for_the_desire_number_of_users()  throws Exception  {
     	 try {
  			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
- 			Thread.sleep(4000);
+ 			Thread.sleep(3000);
  			AR.ClickOnAssignButton();
  			Thread.sleep(3000);
      	} catch (Exception e) {
@@ -710,6 +710,7 @@ public class DesingProjectTestcases {
      public void clicking_on_assign_role_for_group_tab() throws Exception {
     	 try {
   			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
+  			Thread.sleep(3000);
   			driver.navigate().refresh();
   			Thread.sleep(4000);
   			AR.ClickOnSetting();

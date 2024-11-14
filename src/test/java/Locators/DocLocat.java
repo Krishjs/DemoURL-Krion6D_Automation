@@ -21,8 +21,14 @@ public class DocLocat {
 	@FindBy(xpath = "//aside[@id='project-sidebar']/ul/descendant::li[3]")
 	private WebElement doc;
 
-	@FindBy(xpath = "//div[@class='card-header ng-star-inserted']/button[1]")
+//	@FindBy(xpath = "//div[@class='card-header ng-star-inserted']/button[1]")
+//	private WebElement clickuploadfiles;
+	
+	@FindBy(xpath = "//*[@id='main']//app-project-management//app-document-list//button[1]")
 	private WebElement clickuploadfiles;
+
+	
+	
 	
 	@FindBy(xpath="//ejs-uploader[@id='fileupload']//input[@type='file']")
 	private WebElement uploadfilebtn;

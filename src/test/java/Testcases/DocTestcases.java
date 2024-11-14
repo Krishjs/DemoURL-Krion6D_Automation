@@ -45,8 +45,9 @@ public class DocTestcases {
    public void Click_on_File_upload_button_in_document_module() throws InterruptedException {
 	 try {
 	   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(65));
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		DOC.navigatetodoc();
+		Thread.sleep(3000);
     } catch (Exception e) {
 		ExceptionHandler exceptionHandler = new ExceptionHandler(driver, ExtentCucumberAdapter.getCurrentStep());
 		   exceptionHandler.handleException(e, "Document Page");
@@ -69,6 +70,7 @@ public class DocTestcases {
                Thread.sleep(3000);  
                DOC.uploadbtn();
                System.out.println("Uploading file from path: " + imageFilePath);
+               Thread.sleep(2000); 
                DOC.UploadingAnImage(imageFilePath);
                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(500));
                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[starts-with(@class,'e-file-status') and contains(text(),'File uploaded successfully')]")));
