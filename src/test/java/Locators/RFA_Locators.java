@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -14,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RFA_Locators {
@@ -31,7 +33,7 @@ public class RFA_Locators {
 	 @FindBy(xpath = "//input[@placeholder='Enter rfa code']")
 	 private WebElement RFACode;
 	 
-	 @FindBy(xpath = "//input[@placeholder='Enter rfa name']")
+	 @FindBy(xpath = "//input[@placeholder='Enter RFA name']")
 	 private WebElement RFAName;
 	 
 	 @FindBy(xpath = "//textarea[@placeholder='Enter description']")
@@ -50,12 +52,119 @@ public class RFA_Locators {
 	 private WebElement Priority;
 	 
 	 
+	 
+	 @FindBy(xpath = "//app-multiselect[@formcontrolname='status']//ejs-dropdownlist[starts-with(@id,'ej2_dropdownlist')]")
+	 private WebElement SelectStatus;
+	 
+	 @FindBy(xpath="//ul[@class='e-list-parent e-ul ']/li")
+	 private List<WebElement> selectstatustype;
+	 
+	 
+	 @FindBy(xpath = "//*[@id='_gridcontrol_searchbar']")
+	 private WebElement SearchBoxinRFA;
+	 
+	 @FindBy(xpath = "//*[@title='Actions']")
+	 private WebElement ActionButton;
+	 
+	 @FindBy(xpath = "//*[@id='edit']")
+	 private WebElement Edit;
+	 
+	 @FindBy(xpath="//button[.=' Update ']")
+	 private WebElement UpdateButton;
+
+	 
+	 
+	 FluentWait<WebDriver> waits = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10))
+				.pollingEvery(Duration.ofSeconds(2));
+	 
 		public RFA_Locators(WebDriver driver) {
 			this.driver = driver;
 			this.wait = new WebDriverWait(driver, Duration.ofSeconds(35));
 			PageFactory.initElements(driver, this);
 		}
 	
+		
+		
+		
+		public void ClickOnUpdate() {
+			try {
+	  			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	  			wait.until(ExpectedConditions.visibilityOf(UpdateButton)); 
+	  			wait.until(ExpectedConditions.elementToBeClickable(UpdateButton));
+	  			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", UpdateButton);
+	  		    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", UpdateButton);
+	  		} catch (ElementClickInterceptedException e) {
+	  			System.err.println("Element click intercepted: " + e.getMessage());
+	  			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	  			wait.until(ExpectedConditions.visibilityOf(UpdateButton)); 
+	  			wait.until(ExpectedConditions.elementToBeClickable(UpdateButton));
+	  			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", UpdateButton);
+	  			((JavascriptExecutor) driver).executeScript("arguments[0].click();", UpdateButton);
+	  		} catch (Exception e) {
+	  			System.err.println("An unexpected error occurred: " + e.getMessage());
+	  		}
+		}
+		
+		
+		
+		
+		
+		public void SelectStatusclick() {
+			waits.until(ExpectedConditions.elementToBeClickable(SelectStatus));
+			SelectStatus.click();
+		}
+		
+		public void SelectStatusType(String type) {
+			try {
+				selectDropdown(selectstatustype, type);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		
+		public void selectDropdown(List<WebElement>t,String comparetxt) throws Exception {
+			List<WebElement> elements=t;
+			Thread.sleep(2000);
+			for(WebElement s:elements) {
+				String txt=s.getText();
+				if(txt.equalsIgnoreCase(comparetxt)) {
+					s.click();
+					break;	
+				}
+				else {
+					System.out.println("Given Option is not found in the Dropdown List");
+				}
+			}
+			System.out.println("Given Option is Found ");
+		}
+		
+		
+		  public WebElement findTheRequiredRFA(String projectName) {
+		        String dynamicXpath = "//tbody//tr//td//a[contains(text(),'" + RFAName + "')]";
+		        return driver.findElement(By.xpath(dynamicXpath));
+		    }
+		
+		  public void clickOnEdit() throws InterruptedException {
+		        Thread.sleep(2000);
+		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", ActionButton);
+		    	wait.until(ExpectedConditions.elementToBeClickable(ActionButton));
+		        ActionButton.click();
+		        Thread.sleep(3000);
+		        Edit.click();
+		    } 
+		
+		 public void EnterOnSearchBox(String values) throws AWTException, InterruptedException {
+		    	((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+		    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", SearchBoxinRFA);
+		    	wait.until(ExpectedConditions.elementToBeClickable(SearchBoxinRFA));
+		    	SearchBoxinRFA.sendKeys(values);
+		    	Thread.sleep(2000);
+		    	Robot robot = new Robot();
+				robot.keyPress(KeyEvent.VK_ENTER);
+				robot.keyRelease(KeyEvent.VK_ENTER);
+		    }
+		    
+		
 		
 		
 		 public void attachFile(String DocumentName, String FileName) {

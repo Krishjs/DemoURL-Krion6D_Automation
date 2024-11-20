@@ -222,7 +222,7 @@ public class WorkflowTestcases {
 	             Thread.sleep(2000);
 	             
 	             WF.ClickOnCreateButton();
-	           
+	             Thread.sleep(2000);
 	             // Move to the next row
 	             rownumber++;
 	         }

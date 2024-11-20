@@ -376,23 +376,21 @@ public class AssignRole_Locators {
     public void ClickOnAssignButton() {
     	try {
   			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+  			wait.until(ExpectedConditions.visibilityOf(AssignButton)); 
   			wait.until(ExpectedConditions.elementToBeClickable(AssignButton));
-
-  			// Perform the click action
-  			AssignButton.click();
+  			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", AssignButton);
+  		    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", AssignButton);
   		} catch (ElementClickInterceptedException e) {
-  			// Handle the exception if the click is intercepted
   			System.err.println("Element click intercepted: " + e.getMessage());
-
-  			// Optionally, wait again for the spinner to disappear and retry clicking
   			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+  			wait.until(ExpectedConditions.visibilityOf(AssignButton)); 
   			wait.until(ExpectedConditions.elementToBeClickable(AssignButton));
-  			AssignButton.click();
+  			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", AssignButton);
+  			((JavascriptExecutor) driver).executeScript("arguments[0].click();", AssignButton);
   		} catch (Exception e) {
-  			// Handle other potential exceptions
   			System.err.println("An unexpected error occurred: " + e.getMessage());
   		}
-    }
+	}
     
     
     
