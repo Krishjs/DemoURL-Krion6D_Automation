@@ -79,11 +79,11 @@ public class RFITestcases {
 	}
 
 	@Then("Enter the RFI code using the sheetname {string} and rownumber {int}")
-	public void enter_the_rfi_code_using_the_sheetname_and_rownumber(String string, Integer int1) {
+	public void enter_the_rfi_code_using_the_sheetname_and_rownumber(String string, Integer int1) throws InterruptedException {
 		List<Map<String, String>> testdata = excelDataManager.getCachedData(string);
 		String code = testdata.get(int1).get("RFIcode");
 		try {
-
+			Thread.sleep(2000);
 			RFI.enterCode(code);
 
 		} catch (AWTException e) {

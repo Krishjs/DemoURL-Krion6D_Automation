@@ -107,6 +107,10 @@ public class DesingProjectTestcases {
            String email = testdata.get(rownumber).get("Login Email");
            String password = testdata.get(rownumber).get("Login Password");
 
+           if (password.matches("\\d+(\\.\\d+)?")) { // Check if password is numeric
+               password = password.replaceAll("\\.0$", ""); // Remove the decimal if it's a whole number
+           }
+           
            L = new Locators.LoginLocators(driver);
            L.EnterEmail(email);
            L.EnterPassword(password);
@@ -448,7 +452,7 @@ public class DesingProjectTestcases {
 
 			System.out.println("sheet name: " + testdata);
 
-			String AddressLine2 = testdata.get(rownumber).get("Address Line1");
+			String AddressLine2 = testdata.get(rownumber).get("Address Line2");
 			Thread.sleep(1000);
 			D.EnterOnAddressLine2(AddressLine2);
 			LoginInputDatas("AddressLine2", AddressLine2);
