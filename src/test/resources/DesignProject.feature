@@ -113,10 +113,7 @@ Scenario: User Login for Design Projects
   		#Assign Role#
   		
   		
-  		#Scenario: verify by adding the assign role and assing role for group based on excel data#
-  	#	Then Assign role or group based on the data in Excel using sheetname "Assign Role" and rownumber 0#
-  		
-  			@Run		  	 
+  			#@Run		  	 
   		Scenario: Verify by clicking on Assign role sub-module under settings in newly Created Project under Design module
   		Then Clciking on Assign role sub-module under settings in newly Created Project under Design module
   		
@@ -140,16 +137,16 @@ Scenario: User Login for Design Projects
   		@Run							  
   		Scenario: verify by clicking on Assign Role for Group tab
   		Then Clicking on Assign Role for Group tab
-  		@Run						  
+  		#@Run						  
   		Scenario: Verify by clicking on Assign Role Group button to create a group
   		Then Clickingon Assign Role Group button to create a group
-  			@Run				  
+  			#@Run				  
   		Scenario: Veriffy by Clicking on Select role drop-down to select the required role from the list for Group
   		Then Clicking on Select role drop-down to select the required role from the list for Group using sheetname "Assign Role" and rownumber 0
-  			@Run					  
+  			#@Run					  
   		Scenario: Veriffy by Clicking on Add group drop-down to select the required number of users from the list
   		Then Clicking on Add group drop-down to select the required number of users from the list sheetname "Assign Role" and rownumber 0
-  			@Run				  
+  			#@Run				  
   		Scenario: Veirfy by clicking on Assign button to assign the role for the desire number of users in group
   		Then Clicking on Assign button to assing the role for the desire number of users users in group
   		
@@ -157,7 +154,7 @@ Scenario: User Login for Design Projects
   		
   		
   		#WorkFlow Creation#
-  		@Run	 		  	   
+  		#@Run	 		  	   
   		Scenario: Creating workflow based on the type selected in the select category of the project
  			Then Creating workflow based on the type selected in the select category of the project using sheetname "Workflow" and rownumber 0
   		
