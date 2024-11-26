@@ -7,7 +7,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CustomWebDriverManager {
     private static WebDriver driver;
-   // private static final String BASE_URL = "https://tiger.krion6d.com/login"; // Direct URL
+   // private static final String BASE_URL = "https://tiger.krion6d.com/login"; 			// Direct URL
 
     private static final String BASE_URL = "https://demo.krion6d.com/login";
     

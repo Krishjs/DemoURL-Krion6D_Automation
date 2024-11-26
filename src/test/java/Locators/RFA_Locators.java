@@ -30,7 +30,7 @@ public class RFA_Locators {
 	 private WebElement AddButton;
 
 
-	 @FindBy(xpath = "//input[@placeholder='Enter rfa code']")
+	 @FindBy(xpath = "//input[@placeholder='Enter RFA code']")
 	 private WebElement RFACode;
 	 
 	 @FindBy(xpath = "//input[@placeholder='Enter RFA name']")

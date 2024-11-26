@@ -41,7 +41,7 @@ Scenario: User Login for Design Projects
  				Scenario: Verify by Choosing whether to create ISO project or Non-ISO project
  				Then Choosing whether to create ISO project or Non-ISO project using sheetname "Add Project" and rownumber 0
  
- 		 	@Run
+ 		 @Run
     Scenario: Verify by selecting the project template
     Then Clicking on Project template field and selecting the template using sheetname "Add Project" and rownumber 0
  
@@ -71,7 +71,7 @@ Scenario: User Login for Design Projects
   		 @Run	  
   		 Scenario: Verify by Enter and select the project owner type from drop-down
   		 Then Enter and select the project owner type from drop-down using sheetname "Add Project" and rownumber 0	
-  		 	@Run  
+  			@Run  
   		 Scenario: Verify by Enter and select the project status type from drop-down
   		 Then Enter and select the project status type from drop-down using sheetname "Add Project" and rownumber 0		
   		
@@ -82,10 +82,10 @@ Scenario: User Login for Design Projects
   		 @Run	
   		 Scenario: Verify by Entering address in address line two field
   		 Then Entering address in address line two field using sheetname "Add Project" and rownumber 0
-  			@Run 
+  		 @Run 
   		 Scenario: Verify by Entering City name in the field
   		 Then Entering City name in the field using sheetname "Add Project" and rownumber 0
-  		 	 @Run
+  		 	@Run
   		Scenario: Verify by Entering State name in the field
   		Then Entering State name in the field using sheetname "Add Project" and rownumber 0
   		@Run	 
@@ -113,7 +113,7 @@ Scenario: User Login for Design Projects
   		#Assign Role#
   		
   		
-  			#@Run		  	 
+  			@Run		  	 
   		Scenario: Verify by clicking on Assign role sub-module under settings in newly Created Project under Design module
   		Then Clciking on Assign role sub-module under settings in newly Created Project under Design module
   		
@@ -137,16 +137,16 @@ Scenario: User Login for Design Projects
   		@Run							  
   		Scenario: verify by clicking on Assign Role for Group tab
   		Then Clicking on Assign Role for Group tab
-  		#@Run						  
+  		@Run						  
   		Scenario: Verify by clicking on Assign Role Group button to create a group
   		Then Clickingon Assign Role Group button to create a group
-  			#@Run				  
+  			@Run				  
   		Scenario: Veriffy by Clicking on Select role drop-down to select the required role from the list for Group
   		Then Clicking on Select role drop-down to select the required role from the list for Group using sheetname "Assign Role" and rownumber 0
-  			#@Run					  
+  			@Run					  
   		Scenario: Veriffy by Clicking on Add group drop-down to select the required number of users from the list
   		Then Clicking on Add group drop-down to select the required number of users from the list sheetname "Assign Role" and rownumber 0
-  			#@Run				  
+  			@Run				  
   		Scenario: Veirfy by clicking on Assign button to assign the role for the desire number of users in group
   		Then Clicking on Assign button to assing the role for the desire number of users users in group
   		
@@ -154,7 +154,7 @@ Scenario: User Login for Design Projects
   		
   		
   		#WorkFlow Creation#
-  		#@Run	 		  	   
+  		@Run	 		  	   
   		Scenario: Creating workflow based on the type selected in the select category of the project
  			Then Creating workflow based on the type selected in the select category of the project using sheetname "Workflow" and rownumber 0
   		
@@ -300,22 +300,6 @@ Scenario: User Login for Design Projects
 			Scenario: Verify by Selecting Attach files from the drop-down under checklist and attaching the files 
   		Then Selecting Attach files from the drop-down and attaching the files using sheetname "Add RFA" and rownumber 0
  			Then Clicking on Create button to create a RFA for the project
-  		
-  		
-  			#Actions -> Edit RFA
-  			
-  		#Filtering the required RFA to Edit
-  			 
-  	#	Scenario: Verify by filtering the required RFA and clicking on it
-  	#	Then filtering the required RFA and clickin on it using sheetname "Add RFA" and rownumber 0
-  		
-  		
-  	#Edit RFA
-  		
-  	#	Scenario: Verify by changing the required field in RFA module
-  	#	Then Changing the required field using sheetname "Edit RFA" and rownumber 0
-  		
-  		
   		
   		
   		

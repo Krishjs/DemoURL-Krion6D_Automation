@@ -66,15 +66,12 @@ public class DesingProjectTestcases {
      private ExtentTest test;
      private ExcelDataManager excelDataManager = ExcelDataManager.getInstance();
      private List<List<String>> approvalSteps;
-     private static final String EXCEL_FILE_PATH = "C:\\path\\to\\your\\excel\\file.xlsx";
-     private static final String SHEET_NAME = "YourSheetName"; // Specify your sheet name
     
      
      
      @Before
      public void setUp() throws InvalidFormatException, IOException {
          excelDataManager.loadData("C:\\Users\\TWINUser13\\eclipse-workspace\\check\\Krion_6D_Consultation-main\\Excel\\TigerKrionDataSheet.xlsx");
-        // loadApprovalStepsFromExcel();
      }
      
 
@@ -581,11 +578,11 @@ public class DesingProjectTestcases {
      	 try {
     	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(13));
          List<Map<String, String>> testdata = excelDataManager.getCachedData(sheetname);
-         String projectName = testdata.get(rownumber).get("Project name");
+         String projectcode = testdata.get(rownumber).get("Project code");
          Thread.sleep(4000);
-         AR.EnterOnSearchBox(projectName);
+         AR.EnterOnSearchBox(projectcode);
          Thread.sleep(2000);
-         AR.clickOnProject(projectName);
+         AR.clickOnProject(projectcode);
      	} catch (Exception e) {
  			ExceptionHandler exceptionHandler = new ExceptionHandler(driver, ExtentCucumberAdapter.getCurrentStep());
  		   exceptionHandler.handleException(e, "Assigning Role Page");

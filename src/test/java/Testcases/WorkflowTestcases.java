@@ -36,15 +36,12 @@ public class WorkflowTestcases {
 	 private int calen;
 	 private Locators.AssignRole_Locators AR;
      private ExcelDataManager excelDataManager = ExcelDataManager.getInstance();
-     private static final String EXCEL_FILE_PATH = "C:\\path\\to\\your\\excel\\file.xlsx";
-     private static final String SHEET_NAME = "YourSheetName"; // Specify your sheet name
      private Locators.LoginLocators L;
      private Locators.Design_Projects_Locators D;
      
 	 @Before
      public void setUp() throws InvalidFormatException, IOException {
          excelDataManager.loadData("C:\\Users\\TWINUser13\\eclipse-workspace\\Automation\\Excel\\TigerKrionDataSheet.xlsx");
-        // loadApprovalStepsFromExcel();
      }
 	
 	
