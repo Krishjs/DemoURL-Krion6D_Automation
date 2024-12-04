@@ -37,11 +37,11 @@ Scenario: User Login for Design Projects
  Then Clicking on Project module under Design section
  	Then Click on ADD Project button to create new project
  
- 					@Run
+ 				@Run
  				Scenario: Verify by Choosing whether to create ISO project or Non-ISO project
  				Then Choosing whether to create ISO project or Non-ISO project using sheetname "Add Project" and rownumber 0
  
- 		 @Run
+ 		@Run
     Scenario: Verify by selecting the project template
     Then Clicking on Project template field and selecting the template using sheetname "Add Project" and rownumber 0
  
@@ -85,7 +85,7 @@ Scenario: User Login for Design Projects
   		 @Run 
   		 Scenario: Verify by Entering City name in the field
   		 Then Entering City name in the field using sheetname "Add Project" and rownumber 0
-  		 	@Run
+  		@Run
   		Scenario: Verify by Entering State name in the field
   		Then Entering State name in the field using sheetname "Add Project" and rownumber 0
   		@Run	 
@@ -113,7 +113,7 @@ Scenario: User Login for Design Projects
   		#Assign Role#
   		
   		
-  			@Run		  	 
+  		@Run		  	 
   		Scenario: Verify by clicking on Assign role sub-module under settings in newly Created Project under Design module
   		Then Clciking on Assign role sub-module under settings in newly Created Project under Design module
   		
@@ -121,7 +121,7 @@ Scenario: User Login for Design Projects
   		Scenario: Verify by clicking on Assign Role button to assigning the role to the user
   		Then Clicking on Assign Role button to assigning the role to the user
   		
-  			@Run  		 	
+  		@Run  		 	
   		Scenario: Veriffy by Clicking on Select role drop-down to select the required role from the list
   		Then Clicking on Select role drop-down to select the required role from the list using sheetname "Assign Role" and rownumber 0
   		@Run	  					 	 
@@ -140,13 +140,13 @@ Scenario: User Login for Design Projects
   		@Run						  
   		Scenario: Verify by clicking on Assign Role Group button to create a group
   		Then Clickingon Assign Role Group button to create a group
-  			@Run				  
+  		@Run				  
   		Scenario: Veriffy by Clicking on Select role drop-down to select the required role from the list for Group
   		Then Clicking on Select role drop-down to select the required role from the list for Group using sheetname "Assign Role" and rownumber 0
-  			@Run					  
+  		@Run					  
   		Scenario: Veriffy by Clicking on Add group drop-down to select the required number of users from the list
   		Then Clicking on Add group drop-down to select the required number of users from the list sheetname "Assign Role" and rownumber 0
-  			@Run				  
+  		@Run				  
   		Scenario: Veirfy by clicking on Assign button to assign the role for the desire number of users in group
   		Then Clicking on Assign button to assing the role for the desire number of users users in group
   		

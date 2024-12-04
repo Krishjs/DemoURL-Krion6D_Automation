@@ -75,7 +75,7 @@ public class Review_Actions_Locators {
 	 @FindBy(xpath = "//input[@formcontrolname='checkListIds']")
 	 private WebElement CheckList;
 	 
-	 @FindBy(xpath = "//button[.=' Attach files ']")
+	 @FindBy(xpath = "//button[.=' Attach Files ']")
 	 private WebElement Attachfiles;
 	 
 	 
